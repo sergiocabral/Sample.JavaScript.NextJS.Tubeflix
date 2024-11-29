@@ -1,5 +1,6 @@
-import Link from "next/link.js";
+import "./theme.css";
 import "./globals.css";
+import Link from "next/link.js";
 import styles from "./layout.module.css";
 
 export const metadata = {
