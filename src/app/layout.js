@@ -3,6 +3,7 @@ import "./globals.css";
 import Link from "next/link.js";
 import styles from "./layout.module.css";
 import ThemeToggle from "@/components/ThemeToggle.js";
+import { ThemeProvider } from "@/contexts/ThemeContext.js";
 
 export const metadata = {
   title: "Tubeflix",
@@ -11,23 +12,26 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="pt">
-      <body className={styles.body}>
-        <header className={styles.header}>
-          <h1><Link href="/">Tubeflix</Link></h1>
-          <nav>
-            <Link href="/videos">Vídeos</Link>
-            <Link href="/musics">Músicas</Link>
-          </nav>
-        </header>
-        <main className={styles.main}>
-          {children}
-        </main>
-        <footer className={styles.footer}>
-          <p>&copy; 2024 Tubeflix - Todos os direitos reservados</p>
-          <ThemeToggle />
-        </footer>
-      </body>
-    </html>
+    <ThemeProvider>
+      <html lang="pt">
+        <body className={styles.body}>
+          <header className={styles.header}>
+            <h1><Link href="/">Tubeflix</Link></h1>
+            <nav>
+              <Link href="/videos">Vídeos</Link>
+              <Link href="/musics">Músicas</Link>
+            </nav>
+          </header>
+          <main className={styles.main}>
+            {children}
+          </main>
+          <footer className={styles.footer}>
+            <p>&copy; 2024 Tubeflix - Todos os direitos reservados</p>
+            <ThemeToggle />
+            <ThemeToggle />
+          </footer>
+        </body>
+      </html>
+    </ThemeProvider>
   );
 }
