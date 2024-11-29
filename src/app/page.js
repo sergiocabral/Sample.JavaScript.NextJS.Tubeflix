@@ -1,9 +1,13 @@
+import MusicsPage from "./musics/page.js";
 import styles from "./page.module.css";
+import VideosPage from "./videos/page.js";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div>
+    <>
       <h2>Inicio</h2>
-    </div>
+      <VideosPage />
+      <MusicsPage />
+    </>
   );
 }
