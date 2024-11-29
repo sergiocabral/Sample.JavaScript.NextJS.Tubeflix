@@ -1,11 +1,9 @@
-import styles from './page.css'
+import styles from './page.module.css'
 
 export default function MusicsPage() {
-  console.log('MusicsPage styles', typeof styles) // styles não existe
-
   return (
     <>
-      <h2>Músicas</h2>
+      <h2 className={styles.title}>Músicas</h2>
     </>
   )
 }
