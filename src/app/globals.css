@@ -1,0 +1,41 @@
+/* Remove margens e preenchimentos padrão */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: default;
+}
+
+/* Faz com que a largura e altura incluam bordas e preenchimento */
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+/* Fonte básica para legibilidade */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+
+/* Remover estilos padrão de listas */
+ul, ol {
+  list-style: none;
+}
+
+/* Remover sublinhado de links e resetar cores */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Tornar imagens responsivas */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a, button,
+a *, button * {
+  cursor: pointer;
+}
