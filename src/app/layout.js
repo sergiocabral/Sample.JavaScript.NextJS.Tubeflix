@@ -1,5 +1,6 @@
 import "./theme.css";
 import "./globals.css";
+import "./fonts.css";
 import Link from "next/link.js";
 import styles from "./layout.module.css";
 import ThemeToggle from "@/components/ThemeToggle.js";
@@ -16,7 +17,7 @@ export default function RootLayout({ children }) {
       <html lang="pt">
         <body className={styles.body}>
           <header className={styles.header}>
-            <h1><Link href="/">Tubeflix</Link></h1>
+            <h1 className="tourney-font"><Link href="/">Tubeflix</Link></h1>
             <nav>
               <Link href="/videos">Vídeos</Link>
               <Link href="/musics">Músicas</Link>
