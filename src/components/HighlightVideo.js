@@ -5,6 +5,7 @@ import styles from "./HighlightVideo.module.css"
 import { getRandomItem, getVideos } from "@/helpers/helpers.js"
 import Link from "next/link.js"
 import { useRouter } from "next/navigation.js"
+import { YoutubeVideoThumb } from "./YoutubeVideoThumb.js"
 
 export default function HighlightVideo({ tag }) {
   const [ video, setVideo ] = useState(null)
@@ -25,9 +26,16 @@ export default function HighlightVideo({ tag }) {
     event.preventDefault()
   }
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setVideo(getRandomItem(videosList.current))
+    }, 10000)
+    return () => clearInterval(interval)
+  })
+
   return (
     video && <div className={styles.video}>
-      <div className={styles.thumbnail} style={{ backgroundImage: `url(https://img.youtube.com/vi/${video.key}/maxresdefault.jpg), url(https://img.youtube.com/vi/${video.key}/hqdefault.jpg)` }} />
+      <YoutubeVideoThumb className={styles.thumbnail} youtubeId={video.key} />
       <div className={styles.details}>
         <h2 className={styles.title}>{video.title}</h2>
         <p className={styles.description}>{video.description}</p>
