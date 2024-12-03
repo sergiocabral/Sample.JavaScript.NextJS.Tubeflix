@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react"
 import styles from "./VideoList.module.css"
 import { getVideos, randomizeArray } from "@/helpers/helpers.js"
+import VideoThumb from "./VideoThumb.js"
 
 export default function VideoList({ tag }) {
   const [ videos, setVideos ] = useState([])
@@ -17,11 +18,7 @@ export default function VideoList({ tag }) {
 
   return (
     <div className={styles.list}>
-      {videos.map(video => (
-        <div key={video.key} className={styles.video}>
-          <h4>{video.title}</h4>
-        </div>
-      ))}
+      {videos.map(video => <VideoThumb key={video.key} video={video} />)}
     </div>
   );
 }
