@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react"
 import styles from "./VideoTags.module.css"
 import { getVideos, removeDuplicates } from "@/helpers/helpers.js"
+import VideoList from "./VideoList.js"
 
 export default function VideoTags({ tag }) {
   const [ tags, setTags ] = useState([])
@@ -25,6 +26,7 @@ export default function VideoTags({ tag }) {
     tags.map(tag => (
       <div key={tag} className={styles.tag}>
         <h3 className={styles.title}>{tag}</h3>
+        <VideoList tag={tag} />
       </div>
     ))
   );
