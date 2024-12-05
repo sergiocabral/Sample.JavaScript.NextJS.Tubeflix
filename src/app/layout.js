@@ -9,7 +9,20 @@ export default function RootLayout({ children }) {
   return (
     <html lang="pt">
       <body>
-        {children}
+        <header>
+          <h1>Tubeflix</h1>
+          <nav>
+            <a href="/">Início</a>
+            <a href="/videos">Vídeos</a>
+            <a href="/musics">Músicas</a>
+          </nav>
+        </header>
+        <main>
+          {children}
+        </main>
+        <footer>
+          <p>&copy; 2024 Tubeflix</p>
+        </footer>
       </body>
     </html>
   );
