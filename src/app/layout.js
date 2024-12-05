@@ -9,6 +9,13 @@ import { ThemeProvider } from "@/contexts/ThemeContext.js";
 export const metadata = {
   title: "Tubeflix",
   description: "E melhor seleção do YouTube você assiste aqui",
+  openGraph: {
+    title: "Tubeflix",
+    description: "E melhor seleção do YouTube você assiste aqui",
+    images: [
+      '/opengraph.webp'
+    ]
+  }
 };
 
 const tourney = localFont({
