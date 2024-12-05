@@ -28,7 +28,6 @@ export default function RootLayout({ children }) {
           <footer className={styles.footer}>
             <p>&copy; 2024 Tubeflix - Todos os direitos reservados</p>
             <ThemeToggle />
-            <ThemeToggle />
           </footer>
         </body>
       </html>

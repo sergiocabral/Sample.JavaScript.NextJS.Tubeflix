@@ -9,11 +9,13 @@ export function ThemeProvider({ children }) {
 
   useEffect(() => {
     setThemeLight(
+      localStorage.getItem('data-theme') === 'light' ||
       document.documentElement.getAttribute('data-theme') === 'light'
     )
   }, [])
 
   function setThemeLight(mode) {
+    localStorage.setItem('data-theme', mode ? 'light' : 'dark')
     document.documentElement.setAttribute('data-theme', mode ? 'light' : 'dark')
     setThemeLightValue(mode)
   }
