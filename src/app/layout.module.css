@@ -3,7 +3,8 @@
     --footer-height: 40px;
 }
 
-body {
+body,
+body * {
     color: var(--text);
     background-color: var(--background);
 }
@@ -57,4 +58,6 @@ body {
     font-size: 14px;
     padding: 0 20px;
     height: var(--footer-height);
+    z-index: 100;
+    position: relative;
 }
