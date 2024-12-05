@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Tubeflix
 
-## Getting Started
+https://the-tubeflix.vercel.app/
 
-First, run the development server:
+![Tela Inicial do App](./assets/homepage.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Descrição
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Este é um aplicativo desenvolvido em **Next.js**, com o objetivo de demonstrar a maneira moderna e sugerida para criar aplicações React utilizando um framework. O projeto passou pelos conceitos essenciais do Next.js, como:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- **App Router** (abordagem moderna para estruturação de rotas)
+- Utilização do **Turbopack** embutido no Next.js (sem a necessidade de Webpack ou Babel)
+- Renderização eficiente e organização otimizada de componentes.
+- ...
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Funcionalidade
 
-## Learn More
+O aplicativo possui um layout similar ao **Netflix**, mas exibe vídeos do **YouTube**, que são reproduzidos diretamente na interface por meio de embeds do YouTube. 
 
-To learn more about Next.js, take a look at the following resources:
+- A lista de vídeos exibidos no app pode ser facilmente modificada no arquivo: `./src/data/database.json`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Pré-requisitos
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Certifique-se de ter o **Node.js** e o **npm** instalados na sua máquina.
 
-## Deploy on Vercel
+## Comandos para execução
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Instale as dependências do projeto:
+ ```
+ npm install
+ ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+2. Inicie o servidor de desenvolvimento:
+ ```
+ npm run dev
+ ```
+
+3. Para criar um build de produção:
+ ```
+ npm run build
+ ```
+
+4. Para executar o servidor em produção após o build:
+ ```
+ npm start
+ ```
+
+## Estrutura do Projeto
+
+- **`app/`**: Organização de rotas usando a abordagem App Router.
+- **`components/`**: Componentes que montam o layout da aplicação.
+- **`src/data/database.json`**: Arquivo onde a lista de vídeos é configurada.
+- **`public/`**: Recursos estáticos como imagens.
+
+Desenvolvido para ensinar como criar aplicações modernas utilizando Next.js e seus recursos mais recentes!
+
+| [<img src="https://avatars.githubusercontent.com/u/665373?v=4" width="75px;"/>](https://github.com/sergiocabral) |
+| :-: |
+|[sergiocabral.dev](https://sergiocabral.dev)|
