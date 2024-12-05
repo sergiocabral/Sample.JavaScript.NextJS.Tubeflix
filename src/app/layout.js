@@ -1,8 +1,8 @@
+import localFont from "next/font/local";
 import Link from "next/link";
 import style from "./layout.module.css";
 import "./globals.css";
 import "./theme.css";
-import "./fonts.css";
 import ThemeToggle from "@/components/ThemeToggle";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 
@@ -11,11 +11,17 @@ export const metadata = {
   description: "A melhor seleção de vídeos do YouTube",
 };
 
+const toruney = localFont({
+  src: '../fonts/tourney.woff2',
+  variable: '--tourney-font',
+  weight: '100 900'
+})
+
 export default function RootLayout({ children }) {
   return (
     <ThemeProvider>
       <html lang="pt">
-        <body className={style.body}>
+        <body className={`${style.body} ${toruney.variable}`}>
           <header className={style.header}>
             <h1 className="tourney-font"><Link href="/">Tubeflix</Link></h1>
             <nav>
