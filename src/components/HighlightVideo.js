@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react"
 import styles from "./HighlightVideo.module.css"
-import { getRandomItem, objectToArray } from "@/helpers/helpers.js"
+import { getRandomItem, getVideos } from "@/helpers/helpers.js"
 import Link from "next/link.js";
 
 export default function HighlightVideo({ tag }) {
@@ -10,9 +10,7 @@ export default function HighlightVideo({ tag }) {
 
   useEffect(() => {
     async function fetchVideos() {
-      const response = await fetch('/database.json', { next: { revalidate: 60 }})
-      const videos = await response.json();
-      const videosList = objectToArray(videos).filter(video => !tag || video.tags.includes(tag))
+      const videosList = await getVideos(tag)
       setVideo(getRandomItem(videosList))
     }
     fetchVideos()
