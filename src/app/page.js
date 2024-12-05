@@ -1,9 +1,10 @@
+import HighlightVideo from '@/components/HighlightVideo'
 import style from './page.module.css'
 
 export default function Home() {
   return (
     <>
-      <h2 className={style.title}>Início</h2>
+      <HighlightVideo />
     </>    
   );
 }
