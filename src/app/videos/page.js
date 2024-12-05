@@ -1,7 +1,9 @@
+import style from './page.module.css'
+
 export default function VideosPage() {
     return (
         <>
-            <h2>Vídeos</h2>
+            <h2 className={style.title}>Vídeos</h2>
         </>
     )
 }
