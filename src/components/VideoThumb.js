@@ -5,7 +5,7 @@ import styles from "./VideoThumb.module.css"
 
 export default function VideoThumb({ video }) {
   return (
-    video && <Link href="#" className={styles.video}>
+    video && <Link href={`/player/${video.key}`} className={styles.video}>
       <div className={styles.thumbnail} style={{ backgroundImage: `url(https://img.youtube.com/vi/${video.key}/hqdefault.jpg)` }} />
     </Link>
   );
