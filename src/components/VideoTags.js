@@ -20,7 +20,7 @@ export default function VideoTags({ tag }) {
       setTags(tagsList)
     }
     fetchVideos()
-  }, [])
+  }, [tag])
 
   return (
     tags.map(tag => (
