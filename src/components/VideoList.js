@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import style from './VideoList.module.css'
-import { getVideos } from '@/helpers/helpers'
+import { getVideos, randomizeArray } from '@/helpers/helpers'
 import VideoThumb from './VideoThumb'
 
 export default function VideoList({ tag }) {
@@ -11,7 +11,7 @@ export default function VideoList({ tag }) {
     useEffect(() => {
         async function fetchVideos() {
             const videosList = await getVideos(tag)
-            setVideos(videosList)
+            setVideos(randomizeArray(videosList))
         }
         fetchVideos()
     }, [tag])
