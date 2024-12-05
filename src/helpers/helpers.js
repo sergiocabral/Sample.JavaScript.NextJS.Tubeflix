@@ -18,7 +18,7 @@ export function removeDuplicates(array) {
 }
 
 export async function getVideos(tag) {
-  const response = await fetch('/database.json', { next: { revalidate: 60 }})
+  const response = await fetch('/api/videos', { method: 'POST', next: { revalidate: 60 }})
   const videos = await response.json();
   return objectToArray(videos).filter(video => !tag || video.tags.includes(tag))
 }
